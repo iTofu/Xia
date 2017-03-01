@@ -9,8 +9,11 @@ Pod::Spec.new do |s|
   s.social_media_url   = 'http://LeoDev.me'
   s.platform     = :ios, '8.0'
   s.source       = { :git => 'https://github.com/iTofu/Xia.git', :tag => s.version }
-  s.source_files = 'Xia/**/*.{h,m}'
+  s.source_files = 'Xia/*.swift'
+  s.resource     = 'Xia/Xia.bundle'
   s.requires_arc = true
+
+  s.ios.deployment_target = '8.0'
 
   s.dependency 'SnapKit', '~> 3.2.0'
 
