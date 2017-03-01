@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1PI-e5-ZQC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Xia-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XiaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-9o-E4t">
+                                <rect key="frame" x="15" y="104" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WbA-DJ-HHk"/>
+                                </constraints>
+                                <state key="normal" title="Info">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowInfo" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDP-nL-4G3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3D-n2-Mgp">
+                                <rect key="frame" x="15" y="264" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Nep-5h-Cr1"/>
+                                </constraints>
+                                <state key="normal" title="Warning">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowWarning" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QP-s6-bzM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkW-tu-Xi8">
+                                <rect key="frame" x="15" y="184" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fd4-Kw-YH7"/>
+                                </constraints>
+                                <state key="normal" title="Success">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowSuccess" destination="BYZ-38-t0r" eventType="touchUpInside" id="oO9-fK-rKR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="M3D-n2-Mgp" secondAttribute="trailing" constant="15" id="3wS-KW-jDR"/>
+                            <constraint firstItem="Z81-9o-E4t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="FBc-lE-CvD"/>
+                            <constraint firstItem="DkW-tu-Xi8" firstAttribute="top" secondItem="Z81-9o-E4t" secondAttribute="bottom" constant="40" id="JIy-4v-D9W"/>
+                            <constraint firstItem="M3D-n2-Mgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="LKB-u3-TdQ"/>
+                            <constraint firstItem="DkW-tu-Xi8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Q8o-XQ-vP2"/>
+                            <constraint firstAttribute="trailing" secondItem="DkW-tu-Xi8" secondAttribute="trailing" constant="15" id="cp8-5t-oPs"/>
+                            <constraint firstAttribute="trailing" secondItem="Z81-9o-E4t" secondAttribute="trailing" constant="15" id="iCp-C9-eSF"/>
+                            <constraint firstItem="M3D-n2-Mgp" firstAttribute="top" secondItem="DkW-tu-Xi8" secondAttribute="bottom" constant="40" id="veB-f5-vrp"/>
+                            <constraint firstItem="Z81-9o-E4t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="viI-UX-g3u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Xia" id="1IP-4K-vN7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gr7-AQ-GSc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1PI-e5-ZQC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzE-0Y-7ow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="emf-iG-Et2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jue-ud-76J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="123"/>
+        </scene>
+    </scenes>
+</document>
