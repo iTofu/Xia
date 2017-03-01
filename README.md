@@ -74,7 +74,7 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 * Quick Start:
 
-  ```objc
+  ```swift
   import Xia
 
   func showXia() {
