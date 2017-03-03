@@ -26,6 +26,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WbA-DJ-HHk"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Info">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,6 +39,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nep-5h-Cr1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Warning">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,6 +52,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fd4-Kw-YH7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Success">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

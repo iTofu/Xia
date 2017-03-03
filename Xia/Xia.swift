@@ -94,23 +94,28 @@ class Xia: UIView {
         }
     }
     
-    @discardableResult class func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    class func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return Xia().show(type: type, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult class func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    class func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult class func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    class func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult class func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    class func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         switch type {
         case .Info:
             self.iconView.image = Xia.infoImage
@@ -127,19 +132,23 @@ class Xia: UIView {
         return self.show()
     }
     
-    @discardableResult func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    @discardableResult
+    func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     
-    @discardableResult func show() -> Xia {
+    @discardableResult
+    func show() -> Xia {
         if let keyWindow = UIApplication.shared.keyWindow {
             self.installShadow()
             
@@ -169,7 +178,8 @@ class Xia: UIView {
         return self
     }
     
-    @objc private func hideFromTimer() {
+    @objc
+    private func hideFromTimer() {
         self.hide()
     }
     

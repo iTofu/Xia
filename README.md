@@ -124,4 +124,4 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 ## License
 
-SnapKit is released under the [MIT License](https://opensource.org/licenses/MIT). See [MIT License](https://github.com/iTofu/Xia/blob/master/LICENSE) for details.
+Xia is released under the [MIT License](https://opensource.org/licenses/MIT). See [MIT License](https://github.com/iTofu/Xia/blob/master/LICENSE) for details.
