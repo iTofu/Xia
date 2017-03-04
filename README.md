@@ -103,6 +103,10 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 ## ChangeLog
 
+### V 0.0.2
+
+* Improve.
+
 ### V 0.0.1
 
 * Hello World!
