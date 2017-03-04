@@ -257,6 +257,7 @@
 				TargetAttributes = {
 					B31FE2F61E6425D800DB4B18 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4BZ2VM448J;
 						ProvisioningStyle = Automatic;
 					};
 					B31FE30A1E6425D800DB4B18 = {
@@ -617,7 +618,7 @@
 			baseConfigurationReference = 34D2E84E4D247B9C614E011A /* Pods-XiaDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BZ2VM448J;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = XiaDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -633,7 +634,7 @@
 			baseConfigurationReference = 726C021A56D1D0BC6389CD0F /* Pods-XiaDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4BZ2VM448J;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = XiaDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

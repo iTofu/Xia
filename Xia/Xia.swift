@@ -7,13 +7,13 @@
 //
 //  Xia
 //  https://github.com/iTofu/Xia
-//  V 0.0.1
+//  V 0.0.2
 //
 
 import UIKit
 import SnapKit
 
-class Xia: UIView {
+open class Xia: UIView {
     static let xiaBundlePath: String! = Bundle(for: Xia.self).path(forResource: "Xia", ofType: "bundle")
     static let infoImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconInfo@2x.png")
     static let succImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconSuccess@2x.png")
@@ -22,32 +22,32 @@ class Xia: UIView {
     static let succImage: UIImage!    = UIImage.init(contentsOfFile: succImagePath)
     static let warnImage: UIImage!    = UIImage.init(contentsOfFile: warnImagePath)
     
-    enum XiaType {
+    public enum XiaType {
         case Info
         case Success
         case Warning
     }
     
-    var autoHide = true {
+    public var autoHide = true {
         didSet {
             self.timer?.invalidate()
         }
     }
-    var delay = 3.0
+    public var delay = 3.0
     
-    var textColor = UIColor.black {
+    public var textColor = UIColor.black {
         didSet {
             self.textLabel.textColor = textColor
         }
     }
-    var textFont  = UIFont.systemFont(ofSize: 15.0) {
+    public var textFont  = UIFont.systemFont(ofSize: 15.0) {
         didSet {
             self.textLabel.font = textFont
         }
     }
     
-    let iconView  = UIImageView()
-    let textLabel = UILabel()
+    fileprivate let iconView  = UIImageView()
+    fileprivate let textLabel = UILabel()
     
     private var timer: Timer?
     
@@ -61,11 +61,11 @@ class Xia: UIView {
         self.init(frame: CGRect.zero)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupMainView() {
+    private func setupMainView() {
         self.backgroundColor = UIColor.white
         
         let container = UIView()
@@ -95,27 +95,27 @@ class Xia: UIView {
     }
     
     @discardableResult
-    class func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return Xia().show(type: type, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    class func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    class func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    class func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         switch type {
         case .Info:
             self.iconView.image = Xia.infoImage
@@ -133,24 +133,24 @@ class Xia: UIView {
     }
     
     @discardableResult
-    func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    func show() -> Xia {
+    public func show() -> Xia {
         if let keyWindow = UIApplication.shared.keyWindow {
-            self.installShadow()
+            self.xiaInstallShadow()
             
             keyWindow.addSubview(self)
             self.snp.makeConstraints({ (make) in
@@ -183,7 +183,7 @@ class Xia: UIView {
         self.hide()
     }
     
-    func hide(completion: (() -> Void)? = nil) {
+    public func hide(completion: (() -> Void)? = nil) {
         if let keyWindow = self.superview {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .allowUserInteraction, animations: {
                 self.snp.updateConstraints({ (make) in
@@ -208,7 +208,7 @@ extension String {
 }
 
 extension UIView {
-    func installShadow() {
+    func xiaInstallShadow() {
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2.0)
