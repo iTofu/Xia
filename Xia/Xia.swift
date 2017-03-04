@@ -95,27 +95,27 @@ open class Xia: UIView {
     }
     
     @discardableResult
-    public class func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func show(type: XiaType, text: String?, backgroundColor: UIColor = .white) -> Xia {
         return Xia().show(type: type, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showInfo(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showSuccess(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public class func showWarning(_ text: String?, backgroundColor: UIColor = .orange) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func show(type: XiaType, text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func show(type: XiaType, text: String?, backgroundColor: UIColor = .white) -> Xia {
         switch type {
         case .Info:
             self.iconView.image = Xia.infoImage
@@ -133,17 +133,17 @@ open class Xia: UIView {
     }
     
     @discardableResult
-    public func showInfo(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showInfo(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
         return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func showSuccess(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showSuccess(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
         return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func showWarning(_ text: String?, backgroundColor: UIColor = UIColor.white) -> Xia {
+    public func showWarning(_ text: String?, backgroundColor: UIColor = .orange) -> Xia {
         return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
     }
     

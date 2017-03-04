@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         xia.autoHide = false
         xia.textColor = UIColor.white
         xia.textFont = UIFont.boldSystemFont(ofSize: 14.0)
-        xia.showWarning("点赞失败，请稍后重试", backgroundColor: UIColor.orange)
+        xia.showWarning("点赞失败，请稍后重试", backgroundColor: UIColor.red)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(5)) {
             UIApplication.shared.setStatusBarStyle(.default, animated: true)
