@@ -6,7 +6,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/p/Xia.svg)](http://cocoadocs.org/docsets/Xia)
 [![LeoDev](https://img.shields.io/badge/blog-LeoDev.me-brightgreen.svg)](https://LeoDev.me)
 
-🌟 Naughty flexible alert view above the navigation bar.
+🌟 Naughty flexible alert view above the navigation bar. Xia is a part of [DaXia](https://github.com/iTofu/DaXia).
 
 ![Xia](https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImage.png)
 
