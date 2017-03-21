@@ -131,7 +131,7 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
   * Alipay or Wechat Pay:
 
-    <img src="https://cdnqiniu.leodev.me/donate.png" alt="Donate with Alipay or Wechat Pay" title="Donate with Alipay or Wechat Pay" width="320"/>
+    <img src="https://cdnqiniu.leodev.me/donate.png?v=1" alt="Donate with Alipay or Wechat Pay" title="Donate with Alipay or Wechat Pay" width="320"/>
 
   Please note: donation does not imply any type of service contract.
 
