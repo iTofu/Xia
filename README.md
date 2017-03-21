@@ -8,7 +8,7 @@
 
 🌟 Naughty flexible alert view above the navigation bar. Xia is a part of [DaXia](https://github.com/iTofu/DaXia).
 
-![Xia](https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImage.png)
+<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImage.png" alt="Xia" title="Xia" width="320"/>
 
 ```
 In me the tiger sniffs the rose.
@@ -76,11 +76,11 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
   import Xia
 
   func showXia() {
-      
+
       Xia.showInfo("Praise at most 10 people every day")
-      
+
       Xia.showSuccess("Praised success")
-      
+
       Xia.showWarning("Failed, Please try again later")
   }
   ```
@@ -92,11 +92,15 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 ## Preview
 
-![Xia](https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageInfo.png)
+<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageInfo.png" alt="Xia" title="Xia" width="320"/>
+
 ---
-![Xia](https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageSuccess.png)
+
+<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageSuccess.png" alt="Xia" title="Xia" width="320"/>
+
 ---
-![Xia](https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageWarning.png)
+
+<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageWarning.png" alt="Xia" title="Xia" width="320"/>
 
 
 ## ChangeLog
@@ -122,13 +126,13 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 * Donations:
 
   * PayPal:
-  
+
     [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=leodaxia@gmail.com&item_name=Support%20Leo)
-  
+
   * Alipay or Wechat Pay:
-  
+
     <img src="https://cdnqiniu.leodev.me/donate.png" alt="Donate with Alipay or Wechat Pay" title="Donate with Alipay or Wechat Pay" width="320"/>
-    
+
   Please note: donation does not imply any type of service contract.
 
 
