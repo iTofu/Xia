@@ -16,7 +16,7 @@ In me the tiger sniffs the rose.
 心有猛虎，细嗅蔷薇。
 ```
 
-Welcome to visit my blog：https://LeoDev.me
+Welcome to my blog：https://LeoDev.me
 
 
 
@@ -92,18 +92,14 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageInfo.png" alt="Xia" title="Xia" width="320"/>
-
----
-
-<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageSuccess.png" alt="Xia" title="Xia" width="320"/>
-
----
-
-<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageWarning.png" alt="Xia" title="Xia" width="320"/>
+<img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageInfo.png" alt="Xia" title="Xia" width="280"/> <img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageSuccess.png" alt="Xia" title="Xia" width="280"/> <img src="https://raw.githubusercontent.com/iTofu/Xia/master/XiaDemoImage/XiaDemoImageWarning.png" alt="Xia" title="Xia" width="280"/>
 
 
 ## ChangeLog
+
+### V 0.0.3
+
+* Public `textColor`.
 
 ### V 0.0.2
 

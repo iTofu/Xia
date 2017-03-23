@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Xia
 
 class ViewController: UIViewController {
     
@@ -38,7 +39,6 @@ class ViewController: UIViewController {
         
         let xia = Xia()
         xia.autoHide = false
-        xia.textColor = UIColor.white
         xia.textFont = UIFont.boldSystemFont(ofSize: 14.0)
         xia.showWarning("点赞失败，请稍后重试", backgroundColor: UIColor.red)
         

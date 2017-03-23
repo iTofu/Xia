@@ -16,8 +16,6 @@
 		B31FE3051E6425D800DB4B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31FE3031E6425D800DB4B18 /* LaunchScreen.storyboard */; };
 		B31FE3101E6425D800DB4B18 /* XiaDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FE30F1E6425D800DB4B18 /* XiaDemoTests.swift */; };
 		B31FE31B1E6425D900DB4B18 /* XiaDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FE31A1E6425D900DB4B18 /* XiaDemoUITests.swift */; };
-		B31FE32A1E64263B00DB4B18 /* Xia.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B31FE3291E64263B00DB4B18 /* Xia.bundle */; };
-		B31FE32C1E64264600DB4B18 /* Xia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FE32B1E64264600DB4B18 /* Xia.swift */; };
 		FB6A0A9429A3BB77CCA73AB2 /* Pods_XiaDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523C1BE22BF3CB027E005E59 /* Pods_XiaDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +57,6 @@
 		B31FE3161E6425D900DB4B18 /* XiaDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiaDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31FE31A1E6425D900DB4B18 /* XiaDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XiaDemoUITests.swift; sourceTree = "<group>"; };
 		B31FE31C1E6425D900DB4B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31FE3291E64263B00DB4B18 /* Xia.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Xia.bundle; sourceTree = "<group>"; };
-		B31FE32B1E64264600DB4B18 /* Xia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xia.swift; sourceTree = "<group>"; };
 		BBC1B9199D4F4E70DA09941E /* Pods_XiaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XiaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0838C288817F6FC3ADEA0B /* Pods-XiaDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiaDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiaDemoTests/Pods-XiaDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +102,6 @@
 		B31FE2EE1E6425D800DB4B18 = {
 			isa = PBXGroup;
 			children = (
-				B31FE3281E64263B00DB4B18 /* Xia */,
 				B31FE2F91E6425D800DB4B18 /* XiaDemo */,
 				B31FE30E1E6425D800DB4B18 /* XiaDemoTests */,
 				B31FE3191E6425D900DB4B18 /* XiaDemoUITests */,
@@ -155,16 +150,6 @@
 				B31FE31C1E6425D900DB4B18 /* Info.plist */,
 			);
 			path = XiaDemoUITests;
-			sourceTree = "<group>";
-		};
-		B31FE3281E64263B00DB4B18 /* Xia */ = {
-			isa = PBXGroup;
-			children = (
-				B31FE32B1E64264600DB4B18 /* Xia.swift */,
-				B31FE3291E64263B00DB4B18 /* Xia.bundle */,
-			);
-			name = Xia;
-			path = ../Xia;
 			sourceTree = "<group>";
 		};
 		C17257CA510D2900D67F2E1B /* Pods */ = {
@@ -297,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31FE32A1E64263B00DB4B18 /* Xia.bundle in Resources */,
 				B31FE3051E6425D800DB4B18 /* LaunchScreen.storyboard in Resources */,
 				B31FE3021E6425D800DB4B18 /* Assets.xcassets in Resources */,
 				B31FE3001E6425D800DB4B18 /* Main.storyboard in Resources */,
@@ -463,7 +447,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31FE32C1E64264600DB4B18 /* Xia.swift in Sources */,
 				B31FE2FD1E6425D800DB4B18 /* ViewController.swift in Sources */,
 				B31FE2FB1E6425D800DB4B18 /* AppDelegate.swift in Sources */,
 			);

@@ -6,7 +6,9 @@ target 'XiaDemo' do
   use_frameworks!
 
   # Pods for XiaDemo
-  pod 'SnapKit', '~> 3.2.0'
+  # pod 'SnapKit', '~> 3.2.0'
+  
+  pod 'Xia', :path => '../'
 
   target 'XiaDemoTests' do
     inherit! :search_paths

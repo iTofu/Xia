@@ -1,0 +1,6 @@
+framework module Xia {
+  umbrella header "Xia-umbrella.h"
+
+  export *
+  module * { export * }
+}

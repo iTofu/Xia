@@ -1,12 +1,19 @@
 PODS:
   - SnapKit (3.2.0)
+  - Xia (0.0.2):
+    - SnapKit (~> 3.2.0)
 
 DEPENDENCIES:
-  - SnapKit (~> 3.2.0)
+  - Xia (from `../`)
+
+EXTERNAL SOURCES:
+  Xia:
+    :path: "../"
 
 SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Xia: c7ebcafc32b592a7c5e783c18e176d61cd5f2a14
 
-PODFILE CHECKSUM: 97da05e11484e71d779bdfd834d27a19150d38d6
+PODFILE CHECKSUM: d1bf904a1823dae1042d48f767dadcae6b2216a0
 
 COCOAPODS: 1.2.0

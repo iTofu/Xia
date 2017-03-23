@@ -3,12 +3,27 @@
 //  Xia
 //
 //  Created by Leo on 27/02/2017.
-//  Copyright © 2017 Leo. All rights reserved.
 //
-//  Xia
-//  https://github.com/iTofu/Xia
-//  V 0.0.2
+//  Copyright (c) 2017 Leo <leodaxia@gmail.com>
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+
 
 import UIKit
 import SnapKit
@@ -18,9 +33,9 @@ open class Xia: UIView {
     static let infoImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconInfo@2x.png")
     static let succImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconSuccess@2x.png")
     static let warnImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconWarning@2x.png")
-    static let infoImage: UIImage!    = UIImage.init(contentsOfFile: infoImagePath)
-    static let succImage: UIImage!    = UIImage.init(contentsOfFile: succImagePath)
-    static let warnImage: UIImage!    = UIImage.init(contentsOfFile: warnImagePath)
+    open static let infoImage: UIImage!    = UIImage.init(contentsOfFile: infoImagePath)
+    open static let succImage: UIImage!    = UIImage.init(contentsOfFile: succImagePath)
+    open static let warnImage: UIImage!    = UIImage.init(contentsOfFile: warnImagePath)
     
     public enum XiaType {
         case Info
@@ -28,19 +43,19 @@ open class Xia: UIView {
         case Warning
     }
     
-    public var autoHide = true {
+    open var autoHide = true {
         didSet {
             self.timer?.invalidate()
         }
     }
-    public var delay = 3.0
+    open var delay = 3.0
     
-    public var textColor = UIColor.black {
+    open var textColor = UIColor.black {
         didSet {
             self.textLabel.textColor = textColor
         }
     }
-    public var textFont  = UIFont.systemFont(ofSize: 15.0) {
+    open var textFont  = UIFont.systemFont(ofSize: 15.0) {
         didSet {
             self.textLabel.font = textFont
         }
@@ -62,7 +77,9 @@ open class Xia: UIView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        
+        setupMainView()
     }
     
     private func setupMainView() {
@@ -95,27 +112,27 @@ open class Xia: UIView {
     }
     
     @discardableResult
-    public class func show(type: XiaType, text: String?, backgroundColor: UIColor = .white) -> Xia {
-        return Xia().show(type: type, text: text, backgroundColor: backgroundColor)
+    public class func show(type: XiaType, text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
+        return Xia().show(type: type, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showInfo(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
-        return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
+    public class func showInfo(_ text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
+        return self.show(type: .Info, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showSuccess(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
-        return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
+    public class func showSuccess(_ text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
+        return self.show(type: .Success, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public class func showWarning(_ text: String?, backgroundColor: UIColor = .orange) -> Xia {
-        return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
+    public class func showWarning(_ text: String?, textColor: UIColor = .white, backgroundColor: UIColor = .orange) -> Xia {
+        return self.show(type: .Warning, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func show(type: XiaType, text: String?, backgroundColor: UIColor = .white) -> Xia {
+    public func show(type: XiaType, text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
         switch type {
         case .Info:
             self.iconView.image = Xia.infoImage
@@ -126,6 +143,7 @@ open class Xia: UIView {
         }
         
         self.textLabel.text = text
+        self.textColor = textColor
         
         self.backgroundColor = backgroundColor;
         
@@ -133,18 +151,18 @@ open class Xia: UIView {
     }
     
     @discardableResult
-    public func showInfo(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
-        return self.show(type: .Info, text: text, backgroundColor: backgroundColor)
+    public func showInfo(_ text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
+        return self.show(type: .Info, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func showSuccess(_ text: String?, backgroundColor: UIColor = .white) -> Xia {
-        return self.show(type: .Success, text: text, backgroundColor: backgroundColor)
+    public func showSuccess(_ text: String?, textColor: UIColor = .black, backgroundColor: UIColor = .white) -> Xia {
+        return self.show(type: .Success, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
-    public func showWarning(_ text: String?, backgroundColor: UIColor = .orange) -> Xia {
-        return self.show(type: .Warning, text: text, backgroundColor: backgroundColor)
+    public func showWarning(_ text: String?, textColor: UIColor = .white, backgroundColor: UIColor = .orange) -> Xia {
+        return self.show(type: .Warning, text: text, textColor: textColor, backgroundColor: backgroundColor)
     }
     
     @discardableResult
