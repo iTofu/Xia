@@ -97,6 +97,10 @@ If you prefer not to use the aforementioned dependency manager, you can integrat
 
 ## ChangeLog
 
+### V 0.0.4
+
+* Add swipe gesture recognizer.
+
 ### V 0.0.3
 
 * Public `textColor`.

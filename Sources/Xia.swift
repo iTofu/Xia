@@ -28,24 +28,26 @@
 import UIKit
 import SnapKit
 
+public enum XiaType {
+    case Info
+    case Success
+    case Warning
+}
+
 open class Xia: UIView {
-    static let xiaBundlePath: String! = Bundle(for: Xia.self).path(forResource: "Xia", ofType: "bundle")
-    static let infoImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconInfo@2x.png")
-    static let succImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconSuccess@2x.png")
-    static let warnImagePath: String! = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconWarning@2x.png")
-    open static let infoImage: UIImage!    = UIImage.init(contentsOfFile: infoImagePath)
-    open static let succImage: UIImage!    = UIImage.init(contentsOfFile: succImagePath)
-    open static let warnImage: UIImage!    = UIImage.init(contentsOfFile: warnImagePath)
     
-    public enum XiaType {
-        case Info
-        case Success
-        case Warning
-    }
+    static let xiaBundlePath: String = Bundle(for: Xia.self).path(forResource: "Xia", ofType: "bundle")!
+    static let infoImagePath: String = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconInfo@2x.png")
+    static let succImagePath: String = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconSuccess@2x.png")
+    static let warnImagePath: String = xiaBundlePath.xiaStringByAppendingPathComponent("XiaIconWarning@2x.png")
+    open static let infoImage: UIImage = UIImage(contentsOfFile: infoImagePath)!
+    open static let succImage: UIImage = UIImage(contentsOfFile: succImagePath)!
+    open static let warnImage: UIImage = UIImage(contentsOfFile: warnImagePath)!
     
     open var autoHide = true {
         didSet {
             self.timer?.invalidate()
+            self.timer = nil
         }
     }
     open var delay = 3.0
@@ -109,6 +111,21 @@ open class Xia: UIView {
             make.right.equalToSuperview().offset(-10.0)
             make.top.bottom.equalToSuperview()
         }
+        
+        let swipeGR = UISwipeGestureRecognizer(
+            target: self,
+            action: #selector(onSwipe)
+        )
+        swipeGR.direction = .up
+        self.addGestureRecognizer(swipeGR)
+    }
+    
+    @objc
+    private func onSwipe() {
+        self.hide()
+        
+        self.timer?.invalidate()
+        self.timer = nil
     }
     
     @discardableResult
@@ -186,7 +203,7 @@ open class Xia: UIView {
             }, completion: nil)
             
             if self.autoHide {
-                self.timer = Timer.scheduledTimer(timeInterval: self.delay, target: self, selector: #selector(self.hideFromTimer), userInfo: nil, repeats: false)
+                self.timer = Timer.scheduledTimer(timeInterval: self.delay, target: self, selector: #selector(hideFromTimer), userInfo: nil, repeats: false)
                 RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
             }
         } else {
